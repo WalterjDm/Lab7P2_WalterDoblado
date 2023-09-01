@@ -121,6 +121,11 @@ public class main extends javax.swing.JFrame {
         jLabel10.setText("Sueldo");
 
         jb_agregarcliente.setText("Agregar");
+        jb_agregarcliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarclienteMouseClicked(evt);
+            }
+        });
         jb_agregarcliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_agregarclienteActionPerformed(evt);
@@ -137,13 +142,17 @@ public class main extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(61, 61, 61))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25)))))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jt_profesion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jt_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -376,11 +385,13 @@ public class main extends javax.swing.JFrame {
             archivo = new File("./carros.txt");
              fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
              bw= new BufferedWriter(fw);
-             bw.write("{\n"
-                     + "\t   "+jt_marca.getText()
-             +"\t  "+ jt_modelo.getText()
-             +"\t  "+ jt_anio.getText()
-             +"\t  "+ jt_precio.getText());
+             bw.write("[\n\n"
+                     + "\t   "+jt_marca.getText()+"\n"
+             +"\t  "+ jt_modelo.getText()+"\n"
+             +"\t  "+ jt_anio.getText()+"\n"
+             +"\t  "+ jt_precio.getText()+"\n\n"
+               
+             +"]");
              
              
              Vehiculo veh = new Vehiculo(jt_marca.getText(), bt_color.getBackground(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()));
@@ -411,11 +422,93 @@ public class main extends javax.swing.JFrame {
 
     private void jb_agregarvendedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarvendedorMouseClicked
         // TODO add your handling code here:
-        
+         File archivo = null;
+           FileWriter fw = null;
+         BufferedWriter bw =null;
+         
+         try {
+            archivo = new File("./vendedor.txt");
+             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+             bw= new BufferedWriter(fw);
+             Vendedor ven = new Vendedor(jt_nombre.getText(), 0, 0);
+             vendedores.add(ven);
+             bw.write("[\n\n"
+                     + "\t   "+jt_nombre.getText()
+             +"\t  "+ 0+"\n"
+             +"\t  "+ 0+"\n"
+                     
+          +"]");
+             
+             jt_nombre.setText("");
+            
+             
+             bw.newLine();
+             bw.flush();
+             
+             JOptionPane.showMessageDialog(this, 
+                        "vendedor agregado correctamente");  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
         
     }//GEN-LAST:event_jb_agregarvendedorMouseClicked
+
+    private void jb_agregarclienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarclienteMouseClicked
+        // TODO add your handling code here:
+        
+          File archivo = null;
+           FileWriter fw = null;
+         BufferedWriter bw =null;
+         
+         try {
+            archivo = new File("./clientes.txt");
+             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+             bw= new BufferedWriter(fw);
+             bw.write("[\n\n"
+                     + "\t   "+jt_nombreclien.getText()+"\n"
+             +"\t  "+ jt_edadcl.getText()+"\n"
+             +"\t  "+ jt_profesion.getText()+"\n"
+             +"\t  "+ jt_sueldo.getText()+"\n\n"
+               
+             +"]");
+             Cliente cl = new Cliente(jt_nombreclien.getText(), Integer.parseInt(jt_edadcl.getText()), jt_profesion.getText(), 0, Integer.parseInt(jt_sueldo.getText()));
+             clientes.add(cl);
+             
+             
+          
+             
+          jt_nombreclien.setText("");
+             jt_edadcl.setText("");
+             jt_profesion.setText("");
+             jt_sueldo.setText("");
+             
+             bw.newLine();
+             bw.flush();
+             
+             JOptionPane.showMessageDialog(this, 
+                        "Carro agregado correctamente");  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_jb_agregarclienteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -454,7 +547,9 @@ public class main extends javax.swing.JFrame {
 
     
       ArrayList ventas = new ArrayList();
-         ArrayList carros = new ArrayList();
+         ArrayList<Vehiculo> carros = new ArrayList();
+              ArrayList <Cliente> clientes = new ArrayList();
+                   ArrayList <Vendedor> vendedores= new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_color;
     private javax.swing.JLabel jLabel1;
