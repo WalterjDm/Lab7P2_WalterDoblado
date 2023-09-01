@@ -6,34 +6,34 @@ import java.util.ArrayList;
 
 public class Venta {
     
-    private String venddor;
-    private String cliente;
+    private Vendedor venddor;
+    private Cliente cliente;
     private int costo;
-  private String carro;
+  private Vehiculo carro;
 
     public Venta() {
     }
 
-    public Venta(String venddor, String cliente, int costo, String carro) {
+    public Venta(Vendedor venddor, Cliente cliente, int costo, Vehiculo carro) {
         this.venddor = venddor;
         this.cliente = cliente;
         this.costo = costo;
         this.carro = carro;
     }
 
-    public String getVenddor() {
+    public Vendedor getVenddor() {
         return venddor;
     }
 
-    public void setVenddor(String venddor) {
+    public void setVenddor(Vendedor venddor) {
         this.venddor = venddor;
     }
 
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(String cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
@@ -45,11 +45,11 @@ public class Venta {
         this.costo = costo;
     }
 
-    public String getCarro() {
+    public Vehiculo getCarro() {
         return carro;
     }
 
-    public void setCarro(String carro) {
+    public void setCarro(Vehiculo carro) {
         this.carro = carro;
     }
 
@@ -57,6 +57,8 @@ public class Venta {
     public String toString() {
         return "Venta{" + "venddor=" + venddor + ", cliente=" + cliente + ", costo=" + costo + ", carro=" + carro + '}';
     }
+
+   
     
   
   

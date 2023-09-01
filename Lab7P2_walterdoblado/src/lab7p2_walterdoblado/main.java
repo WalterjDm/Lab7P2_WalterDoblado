@@ -526,12 +526,13 @@ public class main extends javax.swing.JFrame {
              +"\t   "+jt_marca.getText()+",\n"
              +"\t  "+ jt_modelo.getText()+",\n"
              +"\t  "+ jt_anio.getText()+",\n"
+             +"\t"  + bt_color.getColorModel()+",\n"
              +"\t  "+ jt_precio.getText()+",\n\n"
                
              +"]");
              
              
-             Vehiculo veh = new Vehiculo(jt_marca.getText(), bt_color.getBackground(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()));
+             Vehiculo veh = new Vehiculo(jt_marca.getText(), bt_color.getBackground(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()),0);
              carros.add(veh);
              
              jt_marca.setText("");
@@ -701,6 +702,49 @@ public class main extends javax.swing.JFrame {
     private void jb_ventasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ventasMouseClicked
         // TODO add your handling code here:
         
+         File archivo = null;
+           FileWriter fw = null;
+         BufferedWriter bw =null;
+         
+         try {
+            archivo = new File("./ventas.txt");
+             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+             bw= new BufferedWriter(fw);
+             bw.write("[\n\n"
+             +"\t   "+ vendedores.get( jc_vendedor.getSelectedIndex())+",\n"
+             +"\t  "+ clientes.get( jc_cliente.getSelectedIndex())+",\n"
+             +"\t  "+ carros.get(jc_carros.getSelectedIndex())+",\n"
+
+               
+             +"]");
+        
+        
+             Venta ven = new Venta(vendedores.get( jc_vendedor.getSelectedIndex()), clientes.get( jc_cliente.getSelectedIndex()), carros.get(jc_carros.getSelectedIndex()).getPrecio(), carros.get(jc_carros.getSelectedIndex()));
+             
+             String id = "0000"+ cont+1;
+             
+             
+             carros.get(jc_carros.getSelectedIndex()).setId(Integer.parseInt(id));
+             carros.remove(jc_carros.getSelectedIndex());
+             
+             
+             
+         
+             
+             bw.newLine();
+             bw.flush();
+             
+             JOptionPane.showMessageDialog(this, 
+                        "Cliente agregado correctamente");  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
         

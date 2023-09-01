@@ -17,13 +17,24 @@ public class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(String marca, Color color, String modelo, int anio, int precio) {
+    public Vehiculo(String marca, Color color, String modelo, int anio, int precio, int id) {
         this.marca = marca;
         this.color = color;
         this.modelo = modelo;
         this.anio = anio;
         this.precio = precio;
+        this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+  
 
     public String getMarca() {
         return marca;
