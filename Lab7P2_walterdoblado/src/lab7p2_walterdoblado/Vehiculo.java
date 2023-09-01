@@ -12,7 +12,8 @@ public class Vehiculo {
     private String modelo;
     private int anio;
     private int precio;
-
+    private int id;
+    
     public Vehiculo() {
     }
 
@@ -70,7 +71,7 @@ public class Vehiculo {
     }
     
     
-    
+  
     
     
     
