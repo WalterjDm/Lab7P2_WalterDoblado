@@ -8,7 +8,7 @@ public class Vehiculo {
     
     
     private String marca;
-    private Color color;
+    private String color;
     private String modelo;
     private int anio;
     private int precio;
@@ -17,7 +17,7 @@ public class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(String marca, Color color, String modelo, int anio, int precio, int id) {
+    public Vehiculo(String marca, String color, String modelo, int anio, int precio, int id) {
         this.marca = marca;
         this.color = color;
         this.modelo = modelo;
@@ -44,11 +44,11 @@ public class Vehiculo {
         this.marca = marca;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
