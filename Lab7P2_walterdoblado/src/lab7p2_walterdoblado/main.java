@@ -5,8 +5,15 @@
 package lab7p2_walterdoblado;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -69,6 +76,11 @@ public class main extends javax.swing.JFrame {
         jLabel6.setText("Nombre del vendedor");
 
         jb_agregarvendedor.setText("Agregar");
+        jb_agregarvendedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarvendedorMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -232,6 +244,11 @@ public class main extends javax.swing.JFrame {
         jLabel5.setText("Precio");
 
         jb_agreVeh.setText("Agregar");
+        jb_agreVeh.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agreVehMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -346,6 +363,59 @@ public class main extends javax.swing.JFrame {
     private void jb_agregarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarclienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_agregarclienteActionPerformed
+
+    private void jb_agreVehMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agreVehMouseClicked
+        // TODO add your handling code here:
+        
+        
+         File archivo = null;
+           FileWriter fw = null;
+         BufferedWriter bw =null;
+         
+         try {
+            archivo = new File("./carros.txt");
+             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+             bw= new BufferedWriter(fw);
+             bw.write("{\n"
+                     + "\t   "+jt_marca.getText()
+             +"\t  "+ jt_modelo.getText()
+             +"\t  "+ jt_anio.getText()
+             +"\t  "+ jt_precio.getText());
+             
+             
+             Vehiculo veh = new Vehiculo(jt_marca.getText(), bt_color.getBackground(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()));
+             carros.add(veh);
+             
+             jt_marca.setText("");
+             bt_color.setBackground(Color.red);
+             jt_modelo.setText("");
+             jt_anio.setText("");
+             jt_precio.setText("");
+             
+             bw.newLine();
+             bw.flush();
+             
+             JOptionPane.showMessageDialog(this, 
+                        "Carro agregado correctamente");  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+    }//GEN-LAST:event_jb_agreVehMouseClicked
+
+    private void jb_agregarvendedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarvendedorMouseClicked
+        // TODO add your handling code here:
+        
+        
+        
+        
+    }//GEN-LAST:event_jb_agregarvendedorMouseClicked
 
     /**
      * @param args the command line arguments
