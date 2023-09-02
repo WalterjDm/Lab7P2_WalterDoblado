@@ -91,6 +91,10 @@ public class main extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_mostrar = new javax.swing.JTextArea();
         jb_act = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -445,20 +449,41 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("vehiculo");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        jButton2.setText("cliente");
+
+        jButton3.setText("vendedor");
+
+        jButton4.setText("ventas");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(151, 151, 151)
+                .addGap(41, 41, 41)
                 .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(200, 200, 200)
+                .addComponent(jButton1)
+                .addGap(38, 38, 38)
+                .addComponent(jButton2)
+                .addGap(33, 33, 33)
+                .addComponent(jButton3)
+                .addGap(27, 27, 27)
+                .addComponent(jButton4)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -471,7 +496,13 @@ public class main extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane2)))
                 .addGap(18, 18, 18)
-                .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(jButton1)
+                        .addComponent(jButton2)
+                        .addComponent(jButton3)
+                        .addComponent(jButton4))
+                    .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -490,7 +521,7 @@ public class main extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
                 .addGap(55, 55, 55))
         );
 
@@ -789,9 +820,19 @@ try{
             String linea;
             while ((linea =br.readLine()) != null) {                
                 String [] tokens = linea.split("]");
-                String [] nombre = tokens.toString().split(",");
+//                String [] nombre = tokens.toString().split(",");
+                System.out.println(linea);
+                
             }
+            
+                  DefaultMutableTreeNode nodo_vehiculo1;
+        nodo_vehiculo1 
+                = new DefaultMutableTreeNode(linea);
  
+      
+          
+            
+    jt_root.setModel(m);
     
 } catch (Exception e) {
             e.printStackTrace();
@@ -806,6 +847,64 @@ try{
    
         
     }//GEN-LAST:event_jb_actMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+     FileWriter fw = null;
+         BufferedWriter bw =null;
+
+//            formas de instanciar el file
+try{
+            archivo = new File("./carros.txt");
+
+//          
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+  jt_mostrar.setText("");
+            String linea;
+            while ((linea = br.readLine()) != null) {                
+//                String [] tokens = linea.split("]");
+////                String [] nombre = tokens.toString().split(",");
+//              
+//                 jt_mostrar.setText(linea);
+                 jt_mostrar.append(linea);
+                 jt_mostrar.append("\n");
+             
+            }
+            
+            
+           archivo = new File("./carros.txt");
+             fw = new FileWriter(archivo, true);
+             bw= new BufferedWriter(fw);
+                bw.write(linea);
+ 
+      
+          
+            
+
+    
+} catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        try {
+            br.close();
+             fr.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton1MouseClicked
 
   
     
@@ -852,6 +951,10 @@ try{
               ArrayList <Cliente> clientes = new ArrayList();
                    ArrayList <Vendedor> vendedores= new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
