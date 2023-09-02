@@ -91,11 +91,8 @@ public class main extends javax.swing.JFrame {
         jb_agreVeh = new javax.swing.JButton();
         jt_color = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jt_root = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_mostrar = new javax.swing.JTextArea();
-        jb_act = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -475,20 +472,9 @@ public class main extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Agregar vehiculo ", jPanel2);
 
-        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("venta");
-        jt_root.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(jt_root);
-
         jt_mostrar.setColumns(20);
         jt_mostrar.setRows(5);
         jScrollPane2.setViewportView(jt_mostrar);
-
-        jb_act.setText("Actualizar");
-        jb_act.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_actMouseClicked(evt);
-            }
-        });
 
         jButton1.setText("mostrar vehiculo");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -551,63 +537,48 @@ public class main extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton5))
-                .addGap(61, 61, 61)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton6))
-                    .addComponent(jButton2))
-                .addGap(74, 74, 74)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton7))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jButton8))
+                        .addGap(221, 221, 221)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jButton5))
+                        .addGap(61, 61, 61)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jButton6))
+                            .addComponent(jButton2))
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3)
+                            .addComponent(jButton7))
+                        .addGap(45, 45, 45)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4)
+                            .addComponent(jButton8)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2)))
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6))
-                        .addContainerGap())))
+                    .addComponent(jButton7)
+                    .addComponent(jButton8)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("jtree", jPanel8);
@@ -868,90 +839,6 @@ jc_vendedor.setModel(modelo);
 
 
     }//GEN-LAST:event_jb_ventasMouseClicked
-
-    private void jb_actMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_actMouseClicked
-        // TODO add your handling code here:
-
-        DefaultTreeModel m = (DefaultTreeModel) jt_root.getModel();
-        DefaultMutableTreeNode raiz
-                = (DefaultMutableTreeNode) m.getRoot();
-        
-
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-
-//            formas de instanciar el file
-        try {
-            archivo = new File("./ventas.txt");
-
-//          
-            fr = new FileReader(archivo);
-            br = new BufferedReader(fr);
-            
-            archivo = new File("./ventas.txt");
-
-//          
-            fr = new FileReader(archivo);
-            br = new BufferedReader(fr);
-            jt_mostrar.setText("");
-            String linea;
-            while ((linea = br.readLine()) != null) {
-//                String [] tokens = linea.split("]");
-////                String [] nombre = tokens.toString().split(",");
-//              
-//                 jt_mostrar.setText(linea);
-                jt_mostrar.append(linea);
-                jt_mostrar.append("\n");
- 
-  
-            }
-
-            
-            
-//            DefaultMutableTreeNode nodo_ide;
-//        nodo_ide
-//                = new DefaultMutableTreeNode();
-        m.setRoot(new DefaultMutableTreeNode(archivo.getName()));
-            
-        
-        
-     
-        
-        
-//           
-            
-            
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-
-    }//GEN-LAST:event_jb_actMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
@@ -1494,12 +1381,10 @@ jc_vendedor.setModel(modelo);
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JButton jb_act;
     private javax.swing.JButton jb_agreVeh;
     private javax.swing.JButton jb_agregarcliente;
     private javax.swing.JButton jb_agregarvendedor;
@@ -1519,7 +1404,6 @@ jc_vendedor.setModel(modelo);
     private javax.swing.JTextField jt_nombreclien;
     private javax.swing.JTextField jt_precio;
     private javax.swing.JTextField jt_profesion;
-    private javax.swing.JTree jt_root;
     private javax.swing.JTextField jt_sueldo;
     // End of variables declaration//GEN-END:variables
   DefaultMutableTreeNode nodo_seleccionado;
