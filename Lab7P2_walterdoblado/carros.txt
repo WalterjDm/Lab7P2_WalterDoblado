@@ -1,9 +1,36 @@
 [
 
+	   mercdes,
+	  si,
+	  2002,
+	azul,
+	  2222,
+
+]
+[
+
 	   mercedes,
 	  si,
 	  2002,
 	azul,
+	  2000,
+
+]
+[
+
+	   mercdes,
+	  si,
 	  2002,
+	azul,
+	  2222,
+
+]
+[
+
+	   mercedes,
+	  si,
+	  2002,
+	azul,
+	  2000,
 
 ]

@@ -2,16 +2,33 @@
 [
 
 	   alfred,
-	  21,
-	  saff,
-	  123412,
+	  23,
+	  si,
+	  233,
 
 ]
 [
 
+	   carlos,
+	  17,
+	  ingeniero,
+	  20000,
+
+]
+
+[
+
 	   alfred,
-	  34,
+	  23,
 	  si,
-	  4546,
+	  233,
+
+]
+[
+
+	   carlos,
+	  17,
+	  ingeniero,
+	  20000,
 
 ]

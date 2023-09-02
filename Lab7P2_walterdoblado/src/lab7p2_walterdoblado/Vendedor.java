@@ -19,7 +19,7 @@ public class Vendedor {
         this.cantdin = cantdin;
     }
 
-  
+   
 
     public String getNombre() {
         return nombre;
