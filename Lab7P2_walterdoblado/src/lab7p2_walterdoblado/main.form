@@ -480,7 +480,7 @@
                           <Component id="jScrollPane3" min="-2" pref="227" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
                           <Component id="jButton10" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="283" max="32767" attributes="0"/>
+                          <EmptySpace pref="272" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -521,7 +521,7 @@
                 </Container>
                 <Component class="javax.swing.JButton" name="jButton10">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton10"/>
+                    <Property name="text" type="java.lang.String" value="Administrar"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton10MouseClicked"/>
@@ -756,10 +756,8 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jButton7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jButton7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton8" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton5" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton6" min="-2" max="-2" attributes="0"/>
                                   </Group>

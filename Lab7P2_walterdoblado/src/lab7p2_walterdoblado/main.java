@@ -352,7 +352,7 @@ public class main extends javax.swing.JFrame {
         jt_admin.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane3.setViewportView(jt_admin);
 
-        jButton10.setText("jButton10");
+        jButton10.setText("Administrar");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton10MouseClicked(evt);
@@ -368,7 +368,7 @@ public class main extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(164, 164, 164)
                 .addComponent(jButton10)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -603,9 +603,8 @@ public class main extends javax.swing.JFrame {
                             .addComponent(jButton4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton7)
-                                .addComponent(jButton8))
+                            .addComponent(jButton7)
+                            .addComponent(jButton8)
                             .addComponent(jButton5)
                             .addComponent(jButton6))
                         .addContainerGap())))
@@ -797,17 +796,20 @@ public class main extends javax.swing.JFrame {
         for (Vendedor vendedore : vendedores) {
 
             modelo.addElement(vendedore.getNombre());
-
+jc_vendedor.setModel(modelo);
         }
+       
 
         for (Cliente cliente : clientes) {
 
             modelo1.addElement(cliente.getNombre());
+               jc_cliente.setModel(modelo1);
         }
 
         for (Vehiculo carro : carros) {
 
             modelo2.addElement(carro.getModelo());
+              jc_carros.setModel(modelo2);
         }
 
         jc_vendedor.setModel(modelo);
@@ -1349,8 +1351,7 @@ public class main extends javax.swing.JFrame {
                   
                   
             }
-            m.reload();
-            lea.close();
+            
             
             
             File ven = new File("./vendedore.txt");
@@ -1372,8 +1373,8 @@ public class main extends javax.swing.JFrame {
 
           DefaultMutableTreeNode mm1 = new DefaultMutableTreeNode ("vendedores");
             String[] splitt = cl2.split("]");
-            for (int i = 0; i < splitt.length; i++) {
-                String[]splityy = splitt[i].split(",");
+            for (int j = 0; j < splitt.length; j++) {
+                String[]splityy = splitt[j].split(",");
                 DefaultMutableTreeNode nombre = new DefaultMutableTreeNode(splityy[0]);
                  DefaultMutableTreeNode e = new DefaultMutableTreeNode(splityy[1]);
                   DefaultMutableTreeNode p= new DefaultMutableTreeNode(splityy[2]);
@@ -1387,6 +1388,8 @@ public class main extends javax.swing.JFrame {
             }
             m2.reload();
             lea1.close();
+            m.reload();
+            lea.close();
             File com = new File("./compradores.txt");
             File cr = new File("./carros.txt");
             File vn = new File("./ventas.txt");
@@ -1519,4 +1522,5 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTree jt_root;
     private javax.swing.JTextField jt_sueldo;
     // End of variables declaration//GEN-END:variables
+  DefaultMutableTreeNode nodo_seleccionado;
 }
