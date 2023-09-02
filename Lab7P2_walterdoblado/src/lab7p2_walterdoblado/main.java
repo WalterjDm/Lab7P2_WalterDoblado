@@ -95,6 +95,10 @@ public class main extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,7 +133,7 @@ public class main extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(340, 340, 340)
                         .addComponent(jb_agregarvendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(333, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,7 +197,7 @@ public class main extends javax.swing.JFrame {
                     .addComponent(jt_nombreclien, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(132, 132, 132)
                 .addComponent(jb_agregarcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(320, Short.MAX_VALUE))
+                .addContainerGap(400, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,7 +274,7 @@ public class main extends javax.swing.JFrame {
                 .addComponent(jb_ventas, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(187, 187, 187))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(121, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jc_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -313,7 +317,7 @@ public class main extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(103, 103, 103)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(417, Short.MAX_VALUE))
+                .addContainerGap(497, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,7 +338,7 @@ public class main extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(122, 122, 122)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(647, Short.MAX_VALUE))
+                .addContainerGap(727, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,7 +396,7 @@ public class main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jt_color))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 2, Short.MAX_VALUE)
+                                .addGap(0, 82, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jt_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -449,18 +453,61 @@ public class main extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("vehiculo");
+        jButton1.setText("mostrar vehiculo");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
 
-        jButton2.setText("cliente");
+        jButton2.setText("mostrar cliente");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
-        jButton3.setText("vendedor");
+        jButton3.setText("mostrar vendedor");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
-        jButton4.setText("ventas");
+        jButton4.setText("mostrar ventas");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jButton5.setText("guardar vehiculo");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("guardar clientes");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jButton7.setText("guardar clientes");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
+        jButton8.setText("guardar ventas");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -475,15 +522,25 @@ public class main extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(jButton1)
-                .addGap(38, 38, 38)
-                .addComponent(jButton2)
-                .addGap(33, 33, 33)
-                .addComponent(jButton3)
-                .addGap(27, 27, 27)
-                .addComponent(jButton4)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(49, 49, 49)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton5))
+                .addGap(61, 61, 61)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jButton6))
+                    .addComponent(jButton2))
+                .addGap(74, 74, 74)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3)
+                    .addComponent(jButton7))
+                .addGap(45, 45, 45)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4)
+                    .addComponent(jButton8))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -495,15 +552,26 @@ public class main extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane2)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(jButton1)
-                        .addComponent(jButton2)
-                        .addComponent(jButton3)
-                        .addComponent(jButton4))
-                    .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_act, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3)
+                            .addComponent(jButton4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton7)
+                                .addComponent(jButton8))
+                            .addComponent(jButton5)
+                            .addComponent(jButton6))
+                        .addContainerGap())))
         );
 
         jTabbedPane1.addTab("jtree", jPanel8);
@@ -521,7 +589,7 @@ public class main extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addGap(55, 55, 55))
         );
 
@@ -545,40 +613,37 @@ public class main extends javax.swing.JFrame {
 
     private void jb_agreVehMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agreVehMouseClicked
         // TODO add your handling code here:
-        
-        
-         File archivo = null;
-           FileWriter fw = null;
-         BufferedWriter bw =null;
-         
-         try {
+
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+        try {
             archivo = new File("./carros.txt");
-             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
-             bw= new BufferedWriter(fw);
-             bw.write("[\n\n"
-             +"\t   "+jt_marca.getText()+",\n"
-             +"\t  "+ jt_modelo.getText()+",\n"
-             +"\t  "+ jt_anio.getText()+",\n"
-             +"\t"  + jt_color.getText()+",\n"
-             +"\t  "+ jt_precio.getText()+",\n\n"
-               
-             +"]");
-             
-             
-             Vehiculo veh = new Vehiculo(jt_marca.getText(), jt_color.getText(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()),0);
-             carros.add(veh);
-             
-             jt_marca.setText("");
-             jt_color.setText("");
-             jt_modelo.setText("");
-             jt_anio.setText("");
-             jt_precio.setText("");
-             
-             bw.newLine();
-             bw.flush();
-             
-             JOptionPane.showMessageDialog(this, 
-                        "Carro agregado correctamente");  
+            fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+            bw = new BufferedWriter(fw);
+            bw.write("[\n\n"
+                    + "\t   " + jt_marca.getText() + ",\n"
+                    + "\t  " + jt_modelo.getText() + ",\n"
+                    + "\t  " + jt_anio.getText() + ",\n"
+                    + "\t" + jt_color.getText() + ",\n"
+                    + "\t  " + jt_precio.getText() + ",\n\n"
+                    + "]");
+
+            Vehiculo veh = new Vehiculo(jt_marca.getText(), jt_color.getText(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()), 0);
+            carros.add(veh);
+
+            jt_marca.setText("");
+            jt_color.setText("");
+            jt_modelo.setText("");
+            jt_anio.setText("");
+            jt_precio.setText("");
+
+            bw.newLine();
+            bw.flush();
+
+            JOptionPane.showMessageDialog(this,
+                    "Carro agregado correctamente");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -588,36 +653,34 @@ public class main extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-           
+
     }//GEN-LAST:event_jb_agreVehMouseClicked
 
     private void jb_agregarvendedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarvendedorMouseClicked
         // TODO add your handling code here:
-         File archivo = null;
-           FileWriter fw = null;
-         BufferedWriter bw =null;
-         
-         try {
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+        try {
             archivo = new File("./vendedor.txt");
-             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
-             bw= new BufferedWriter(fw);
-             Vendedor ven = new Vendedor(jt_nombre.getText(), 0, 0);
-             vendedores.add(ven);
-             bw.write("[\n\n"
-             +"\t   "+jt_nombre.getText()+",\n"
-             +"\t  "+ 0+",\n"
-             +"\t  "+ 0+",\n"
-                     
-          +"]");
-             
-             jt_nombre.setText("");
-            
-             
-             bw.newLine();
-             bw.flush();
-             
-             JOptionPane.showMessageDialog(this, 
-                        "vendedor agregado correctamente");  
+            fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+            bw = new BufferedWriter(fw);
+            Vendedor ven = new Vendedor(jt_nombre.getText(), 0, 0);
+            vendedores.add(ven);
+            bw.write("[\n\n"
+                    + "\t   " + jt_nombre.getText() + ",\n"
+                    + "\t  " + 0 + ",\n"
+                    + "\t  " + 0 + ",\n"
+                    + "]");
+
+            jt_nombre.setText("");
+
+            bw.newLine();
+            bw.flush();
+
+            JOptionPane.showMessageDialog(this,
+                    "vendedor agregado correctamente");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -627,45 +690,40 @@ public class main extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_jb_agregarvendedorMouseClicked
 
     private void jb_agregarclienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarclienteMouseClicked
         // TODO add your handling code here:
-        
-          File archivo = null;
-           FileWriter fw = null;
-         BufferedWriter bw =null;
-         
-         try {
+
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+        try {
             archivo = new File("./clientes.txt");
-             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
-             bw= new BufferedWriter(fw);
-             bw.write("[\n\n"
-             + "\t   "+jt_nombreclien.getText()+",\n"
-             +"\t  "+ jt_edadcl.getText()+",\n"
-             +"\t  "+ jt_profesion.getText()+",\n"
-             +"\t  "+ jt_sueldo.getText()+",\n\n"
-               
-             +"]");
-             Cliente cl = new Cliente(jt_nombreclien.getText(), Integer.parseInt(jt_edadcl.getText()), jt_profesion.getText(), 0, Integer.parseInt(jt_sueldo.getText()));
-             clientes.add(cl);
-             
-             
-          
-             
-          jt_nombreclien.setText("");
-             jt_edadcl.setText("");
-             jt_profesion.setText("");
-             jt_sueldo.setText("");
-             
-             bw.newLine();
-             bw.flush();
-             
-             JOptionPane.showMessageDialog(this, 
-                        "Cliente agregado correctamente");  
+            fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+            bw = new BufferedWriter(fw);
+            bw.write("[\n\n"
+                    + "\t   " + jt_nombreclien.getText() + ",\n"
+                    + "\t  " + jt_edadcl.getText() + ",\n"
+                    + "\t  " + jt_profesion.getText() + ",\n"
+                    + "\t  " + jt_sueldo.getText() + ",\n\n"
+                    + "]");
+            Cliente cl = new Cliente(jt_nombreclien.getText(), Integer.parseInt(jt_edadcl.getText()), jt_profesion.getText(), 0, Integer.parseInt(jt_sueldo.getText()));
+            clientes.add(cl);
+
+            jt_nombreclien.setText("");
+            jt_edadcl.setText("");
+            jt_profesion.setText("");
+            jt_sueldo.setText("");
+
+            bw.newLine();
+            bw.flush();
+
+            JOptionPane.showMessageDialog(this,
+                    "Cliente agregado correctamente");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -675,57 +733,50 @@ public class main extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jb_agregarclienteMouseClicked
 
     private void jc_vendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_vendedorActionPerformed
         // TODO add your handling code here:
-       
-        
-        
+
+
     }//GEN-LAST:event_jc_vendedorActionPerformed
 
 
-    
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
         // TODO add your handling code here:
-        
-         DefaultComboBoxModel modelo
+
+        DefaultComboBoxModel modelo
                 = (DefaultComboBoxModel) jc_vendedor.getModel();
-         DefaultComboBoxModel modelo1
+        DefaultComboBoxModel modelo1
                 = (DefaultComboBoxModel) jc_cliente.getModel();
-         DefaultComboBoxModel modelo2
+        DefaultComboBoxModel modelo2
                 = (DefaultComboBoxModel) jc_carros.getModel();
-         modelo.removeAllElements();
-          modelo1.removeAllElements();
-           modelo2.removeAllElements();
-           
-           
-         for (Vendedor vendedore : vendedores) {
-            
-             modelo.addElement(vendedore.getNombre());
-             
-             
+        modelo.removeAllElements();
+        modelo1.removeAllElements();
+        modelo2.removeAllElements();
+
+        for (Vendedor vendedore : vendedores) {
+
+            modelo.addElement(vendedore.getNombre());
+
         }
-         
-         for (Cliente cliente : clientes) {
-            
-             
-             modelo1.addElement(cliente.getNombre());
+
+        for (Cliente cliente : clientes) {
+
+            modelo1.addElement(cliente.getNombre());
         }
-         
-         for (Vehiculo carro : carros) {
-            
-             modelo2.addElement(carro.getModelo());
+
+        for (Vehiculo carro : carros) {
+
+            modelo2.addElement(carro.getModelo());
         }
-         
-         jc_vendedor.setModel(modelo);
-         jc_cliente.setModel(modelo1);
-         jc_carros.setModel(modelo2);
-         
+
+        jc_vendedor.setModel(modelo);
+        jc_cliente.setModel(modelo1);
+        jc_carros.setModel(modelo2);
+
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void jb_ventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ventasActionPerformed
@@ -734,41 +785,33 @@ public class main extends javax.swing.JFrame {
 
     private void jb_ventasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ventasMouseClicked
         // TODO add your handling code here:
-        
-         File archivo = null;
-           FileWriter fw = null;
-         BufferedWriter bw =null;
-         
-         try {
-            archivo = new File("./ventas.txt");
-             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
-             bw= new BufferedWriter(fw);
-             bw.write("[\n\n"
-             +"\t   "+ vendedores.get( jc_vendedor.getSelectedIndex())+",\n"
-             +"\t  "+ clientes.get( jc_cliente.getSelectedIndex())+",\n"
-             +"\t  "+ carros.get(jc_carros.getSelectedIndex())+",\n"
 
-               
-             +"]");
-        
-        
-             Venta ven = new Venta(vendedores.get( jc_vendedor.getSelectedIndex()), clientes.get( jc_cliente.getSelectedIndex()), carros.get(jc_carros.getSelectedIndex()).getPrecio(), carros.get(jc_carros.getSelectedIndex()));
-             
-             String id = "0000"+ cont+1;
-             
-             
-             carros.get(jc_carros.getSelectedIndex()).setId(Integer.parseInt(id));
-             carros.remove(jc_carros.getSelectedIndex());
-             
-             
-             
-         
-             
-             bw.newLine();
-             bw.flush();
-             
-             JOptionPane.showMessageDialog(this, 
-                        "Cliente agregado correctamente");  
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+        try {
+            archivo = new File("./ventas.txt");
+            fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
+            bw = new BufferedWriter(fw);
+            bw.write("[\n\n"
+                    + "\t   " + vendedores.get(jc_vendedor.getSelectedIndex()) + ",\n"
+                    + "\t  " + clientes.get(jc_cliente.getSelectedIndex()) + ",\n"
+                    + "\t  " + carros.get(jc_carros.getSelectedIndex()) + ",\n"
+                    + "]");
+
+            Venta ven = new Venta(vendedores.get(jc_vendedor.getSelectedIndex()), clientes.get(jc_cliente.getSelectedIndex()), carros.get(jc_carros.getSelectedIndex()).getPrecio(), carros.get(jc_carros.getSelectedIndex()));
+
+            String id = "0000" + cont + 1;
+
+            carros.get(jc_carros.getSelectedIndex()).setId(Integer.parseInt(id));
+            carros.remove(jc_carros.getSelectedIndex());
+
+            bw.newLine();
+            bw.flush();
+
+            JOptionPane.showMessageDialog(this,
+                    "Cliente agregado correctamente");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -778,39 +821,26 @@ public class main extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jb_ventasMouseClicked
 
     private void jb_actMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_actMouseClicked
         // TODO add your handling code here:
-        
+
         DefaultTreeModel m = (DefaultTreeModel) jt_root.getModel();
         DefaultMutableTreeNode raiz
                 = (DefaultMutableTreeNode) m.getRoot();
         DefaultMutableTreeNode nodo_vehiculo;
-        nodo_vehiculo 
-                = new DefaultMutableTreeNode(con1+1);
-        
-     
+        nodo_vehiculo
+                = new DefaultMutableTreeNode(con1 + 1);
+
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
-       
 
 //            formas de instanciar el file
-try{
+        try {
             archivo = new File("./carros.txt");
 
 //          
@@ -818,96 +848,332 @@ try{
             br = new BufferedReader(fr);
 
             String linea;
-            while ((linea =br.readLine()) != null) {                
-                String [] tokens = linea.split("]");
+            while ((linea = br.readLine()) != null) {
+                String[] tokens = linea.split("]");
 //                String [] nombre = tokens.toString().split(",");
                 System.out.println(linea);
-                
+
             }
-            
-                  DefaultMutableTreeNode nodo_vehiculo1;
-        nodo_vehiculo1 
-                = new DefaultMutableTreeNode(linea);
- 
-      
-          
-            
-    jt_root.setModel(m);
-    
-} catch (Exception e) {
+
+            DefaultMutableTreeNode nodo_vehiculo1;
+            nodo_vehiculo1
+                    = new DefaultMutableTreeNode(linea);
+
+            jt_root.setModel(m);
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         try {
             br.close();
-             fr.close();
+            fr.close();
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-   
-        
+
+
     }//GEN-LAST:event_jb_actMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        
+
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
-     FileWriter fw = null;
-         BufferedWriter bw =null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
 
 //            formas de instanciar el file
-try{
+        try {
             archivo = new File("./carros.txt");
 
 //          
             fr = new FileReader(archivo);
             br = new BufferedReader(fr);
-  jt_mostrar.setText("");
+            jt_mostrar.setText("");
             String linea;
-            while ((linea = br.readLine()) != null) {                
+            while ((linea = br.readLine()) != null) {
 //                String [] tokens = linea.split("]");
 ////                String [] nombre = tokens.toString().split(",");
 //              
 //                 jt_mostrar.setText(linea);
-                 jt_mostrar.append(linea);
-                 jt_mostrar.append("\n");
-             
-            }
-            
-            
-           archivo = new File("./carros.txt");
-             fw = new FileWriter(archivo, true);
-             bw= new BufferedWriter(fw);
-                bw.write(linea);
- 
-      
-          
-            
+                jt_mostrar.append(linea);
+                jt_mostrar.append("\n");
 
-    
-} catch (Exception e) {
+            }
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         try {
             br.close();
-             fr.close();
+            fr.close();
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
-        
-        
-        
-        
-        
+
     }//GEN-LAST:event_jButton1MouseClicked
 
-  
-    
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+
+//          
+            archivo = new File("./carros.txt");
+
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            bw.write(jt_mostrar.getText());
+
+            JOptionPane.showMessageDialog(this,
+                    "Guardado correctamente");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+            archivo = new File("./clientes.txt");
+
+//          
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+            jt_mostrar.setText("");
+            String linea;
+            while ((linea = br.readLine()) != null) {
+//                String [] tokens = linea.split("]");
+////                String [] nombre = tokens.toString().split(",");
+//              
+//                 jt_mostrar.setText(linea);
+                jt_mostrar.append(linea);
+                jt_mostrar.append("\n");
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+
+//          
+            archivo = new File("./clientes.txt");
+
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            bw.write(jt_mostrar.getText());
+
+            JOptionPane.showMessageDialog(this,
+                    "Guardado correctamente");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+            archivo = new File("./vendedor.txt");
+
+//          
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+            jt_mostrar.setText("");
+            String linea;
+            while ((linea = br.readLine()) != null) {
+//                String [] tokens = linea.split("]");
+////                String [] nombre = tokens.toString().split(",");
+//              
+//                 jt_mostrar.setText(linea);
+                jt_mostrar.append(linea);
+                jt_mostrar.append("\n");
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+
+//          
+            archivo = new File("./vendedor.txt");
+
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            bw.write(jt_mostrar.getText());
+
+            JOptionPane.showMessageDialog(this,
+                    "Guardado correctamente");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+            archivo = new File("./ventas.txt");
+
+//          
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+            jt_mostrar.setText("");
+            String linea;
+            while ((linea = br.readLine()) != null) {
+//                String [] tokens = linea.split("]");
+////                String [] nombre = tokens.toString().split(",");
+//              
+//                 jt_mostrar.setText(linea);
+                jt_mostrar.append(linea);
+                jt_mostrar.append("\n");
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        // TODO add your handling code here:
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+//            formas de instanciar el file
+        try {
+
+//          
+            archivo = new File("./ventas.txt");
+
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            bw.write(jt_mostrar.getText());
+
+            JOptionPane.showMessageDialog(this,
+                    "Guardado correctamente");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jButton8MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -945,16 +1211,20 @@ try{
 
     int cont = 0;
     int con1 = 0;
-    
-      ArrayList<Venta> ventas = new ArrayList();
-         ArrayList<Vehiculo> carros = new ArrayList();
-              ArrayList <Cliente> clientes = new ArrayList();
-                   ArrayList <Vendedor> vendedores= new ArrayList();
+
+    ArrayList<Venta> ventas = new ArrayList();
+    ArrayList<Vehiculo> carros = new ArrayList();
+    ArrayList<Cliente> clientes = new ArrayList();
+    ArrayList<Vendedor> vendedores = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
