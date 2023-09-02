@@ -1,34 +1,11 @@
 
-[
 
-	   alfred,
-	  23,
-	  si,
-	  233,
-
-]
-[
-
-	   carlos,
-	  17,
-	  ingeniero,
-	  20000,
-
-]
 
 [
 
-	   alfred,
-	  23,
-	  si,
-	  233,
-
-]
-[
-
-	   carlos,
-	  17,
-	  ingeniero,
-	  20000,
+	   asfas,
+	  124,
+	  asfasf,
+	  1241
 
 ]

@@ -1,19 +1,8 @@
 
+
 [
 
-	   michale,
+	   asafa,
 	  0,
-	  0,
-]
-[
-
-	   alfred,
-	  0,
-	  0,
-]
-[
-
-	   michael,
-	  0,
-	  0,
+	  0
 ]

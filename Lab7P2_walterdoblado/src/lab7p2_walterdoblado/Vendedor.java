@@ -49,7 +49,7 @@ public class Vendedor {
 
     @Override
     public String toString() {
-        return "Vendedor{" + "nombre=" + nombre + ", cantVend=" + cantVend + ", cantdin=" + cantdin + '}';
+        return   nombre  ;
     }
         
     

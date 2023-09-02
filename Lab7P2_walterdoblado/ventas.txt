@@ -1,14 +1,10 @@
+
+
+
 [
 
-	   1,
-	   Vendedor{nombre=michale, cantVend=0, cantdin=0},
-	  Cliente{nombre=alfred, edad=23, profesion=si, cantCarro=0, sueldo=233},
-	  Vehiculo{marca=mercdes, color=azul, modelo=si, anio=2002, precio=2222},
-]
-[
-
-	   1,
-	   Vendedor{nombre=michael, cantVend=0, cantdin=0},
-	  Cliente{nombre=carlos, edad=17, profesion=ingeniero, cantCarro=0, sueldo=20000},
-	  Vehiculo{marca=mercedes, color=azul, modelo=si, anio=2002, precio=2000},
+	   50,
+	   asafa,
+	  asfas,
+	  1
 ]

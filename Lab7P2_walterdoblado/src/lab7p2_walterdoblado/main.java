@@ -76,7 +76,8 @@ public class main extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTree2 = new javax.swing.JTree();
+        jt_admin = new javax.swing.JTree();
+        jButton10 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jt_marca = new javax.swing.JTextField();
@@ -345,28 +346,44 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap(105, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Jtree actividad", jPanel6);
+        jTabbedPane1.addTab("Jtree archivo dia", jPanel6);
 
-        jScrollPane3.setViewportView(jTree2);
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Admin");
+        jt_admin.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane3.setViewportView(jt_admin);
+
+        jButton10.setText("jButton10");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(727, Short.MAX_VALUE))
+                .addGap(175, 175, 175)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(164, 164, 164)
+                .addComponent(jButton10)
+                .addContainerGap(283, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jButton10)))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("jtree dia", jPanel7);
+        jTabbedPane1.addTab("admin", jPanel7);
 
         jLabel1.setText("Marca");
 
@@ -647,7 +664,7 @@ public class main extends javax.swing.JFrame {
                     + "\t  " + jt_modelo.getText() + ",\n"
                     + "\t  " + jt_anio.getText() + ",\n"
                     + "\t" + jt_color.getText() + ",\n"
-                    + "\t  " + jt_precio.getText() + ",\n\n"
+                    + "\t  " + jt_precio.getText() + "\n\n"
                     + "]");
 
             Vehiculo veh = new Vehiculo(jt_marca.getText(), jt_color.getText(), jt_modelo.getText(), Integer.parseInt(jt_anio.getText()), Integer.parseInt(jt_precio.getText()), 0);
@@ -691,7 +708,7 @@ public class main extends javax.swing.JFrame {
             bw.write("[\n\n"
                     + "\t   " + jt_nombre.getText() + ",\n"
                     + "\t  " + 0 + ",\n"
-                    + "\t  " + 0 + ",\n"
+                    + "\t  " + 0 + "\n"
                     + "]");
 
             jt_nombre.setText("");
@@ -729,7 +746,7 @@ public class main extends javax.swing.JFrame {
                     + "\t   " + jt_nombreclien.getText() + ",\n"
                     + "\t  " + jt_edadcl.getText() + ",\n"
                     + "\t  " + jt_profesion.getText() + ",\n"
-                    + "\t  " + jt_sueldo.getText() + ",\n\n"
+                    + "\t  " + jt_sueldo.getText() + "\n\n"
                     + "]");
             Cliente cl = new Cliente(jt_nombreclien.getText(), Integer.parseInt(jt_edadcl.getText()), jt_profesion.getText(), 0, Integer.parseInt(jt_sueldo.getText()));
             clientes.add(cl);
@@ -814,20 +831,22 @@ public class main extends javax.swing.JFrame {
             archivo = new File("./ventas.txt");
             fw = new FileWriter(archivo, true);///en false crea una nueva carpeta si no hay
             bw = new BufferedWriter(fw);
-              String idvent = "0000" + con1 + 1;
-              int idevent = Integer.parseInt(idvent);
+             
+              int idevent = con1 + 1*100/2;
+                int id = cont *230/2;
+                 carros.get(jc_carros.getSelectedIndex()).setId(id);
             bw.write("[\n\n"
                     + "\t   "+ idevent+ ",\n"
                     + "\t   " + vendedores.get(jc_vendedor.getSelectedIndex()) + ",\n"
                     + "\t  " + clientes.get(jc_cliente.getSelectedIndex()) + ",\n"
-                    + "\t  " + carros.get(jc_carros.getSelectedIndex()) + ",\n"
+                    + "\t  " + carros.get(jc_carros.getSelectedIndex()) + "\n"
                     + "]");
 
             Venta ven = new Venta(vendedores.get(jc_vendedor.getSelectedIndex()), clientes.get(jc_cliente.getSelectedIndex()), carros.get(jc_carros.getSelectedIndex()).getPrecio(), carros.get(jc_carros.getSelectedIndex()));
 
-            String id = "0000" + cont + 1;
+          
 
-            carros.get(jc_carros.getSelectedIndex()).setId(Integer.parseInt(id));
+           
             carros.remove(jc_carros.getSelectedIndex());
 
             bw.newLine();
@@ -987,7 +1006,7 @@ public class main extends javax.swing.JFrame {
 //          
             archivo = new File("./carros.txt");
 
-            fw = new FileWriter(archivo, true);
+            fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
             bw.write(jt_mostrar.getText());
 
@@ -1061,7 +1080,7 @@ public class main extends javax.swing.JFrame {
 //          
             archivo = new File("./clientes.txt");
 
-            fw = new FileWriter(archivo, true);
+            fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
             bw.write(jt_mostrar.getText());
 
@@ -1135,7 +1154,7 @@ public class main extends javax.swing.JFrame {
 //          
             archivo = new File("./vendedor.txt");
 
-            fw = new FileWriter(archivo, true);
+            fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
             bw.write(jt_mostrar.getText());
 
@@ -1210,7 +1229,7 @@ public class main extends javax.swing.JFrame {
 //          
             archivo = new File("./ventas.txt");
 
-            fw = new FileWriter(archivo, true);
+            fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
             bw.write(jt_mostrar.getText());
 
@@ -1243,10 +1262,7 @@ public class main extends javax.swing.JFrame {
         archivo = new File("./ventas.txt");
         
         try {
-            fr = new FileReader(archivo);
-       
-            br = new BufferedReader(fr);
-            jt_mostrar.setText("");
+
             String linea="";
             Scanner lea = new Scanner(archivo);
             while (lea.hasNext()) {
@@ -1258,11 +1274,10 @@ public class main extends javax.swing.JFrame {
                 
                 
                 
-//                jt_mostrar.append(linea);
-//                jt_mostrar.append("\n");
+
 
             }
-            
+            System.out.println(linea);
             String[] split = linea.split("]");
             for (int i = 0; i < split.length; i++) {
                 String[]splity = split[i].split(",");
@@ -1273,26 +1288,120 @@ public class main extends javax.swing.JFrame {
                   idvent.add(nombreven);
                   idvent.add(nombrecomp);
                   idvent.add(idcarro);
-                  raiz.add(idcarro);
+                  raiz.add(idvent);
                   
                   
             }
             m.reload();
-            
+            lea.close();
     
          } catch (FileNotFoundException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            
+//            
+////            br.close();
+////            fr.close();
+//        } catch (IOException ex) {
+//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         
     }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        
+        try {
+            File cl = new File("./clientes.txt");
+              Scanner lea = new Scanner(cl);
+              String cl1 ="";
+              while (lea.hasNext()) {
+              cl1+=lea.next();
+                
+            }
+                File archivo = null;
+         FileReader fr = null;
+        BufferedReader br = null;
+        DefaultTreeModel m = (DefaultTreeModel) jt_admin.getModel();
+        DefaultMutableTreeNode raiz
+                = (DefaultMutableTreeNode) m.getRoot();
+        
+       
+        
+      
+
+          DefaultMutableTreeNode m1 = new DefaultMutableTreeNode ("cliente");
+            String[] split = cl1.split("]");
+            for (int i = 0; i < split.length; i++) {
+                String[]splity = split[i].split(",");
+                DefaultMutableTreeNode nombre = new DefaultMutableTreeNode(splity[0]);
+                 DefaultMutableTreeNode edad = new DefaultMutableTreeNode(splity[1]);
+                  DefaultMutableTreeNode profesion= new DefaultMutableTreeNode(splity[2]);
+                     DefaultMutableTreeNode sueldo = new DefaultMutableTreeNode(splity[3]);
+                 m1.add(nombre);
+                 m1.add(edad);
+                 m1.add(profesion);
+                 m1.add(sueldo);
+                  raiz.add(m1);
+                  
+                  
+            }
+            m.reload();
+            lea.close();
+            
+            
+            File ven = new File("./vendedore.txt");
+               Scanner lea1 = new Scanner(ven);
+              String cl2 ="";
+              while (lea1.hasNext()) {
+              cl2+=lea1.next();
+                
+            }
+                File archivo1 = null;
+         
+        DefaultTreeModel m2 = (DefaultTreeModel) jt_admin.getModel();
+        DefaultMutableTreeNode raiz1
+                = (DefaultMutableTreeNode) m2.getRoot();
+        
+       
+        
+      
+
+          DefaultMutableTreeNode mm1 = new DefaultMutableTreeNode ("vendedores");
+            String[] splitt = cl2.split("]");
+            for (int i = 0; i < splitt.length; i++) {
+                String[]splityy = splitt[i].split(",");
+                DefaultMutableTreeNode nombre = new DefaultMutableTreeNode(splityy[0]);
+                 DefaultMutableTreeNode e = new DefaultMutableTreeNode(splityy[1]);
+                  DefaultMutableTreeNode p= new DefaultMutableTreeNode(splityy[2]);
+                  
+                 mm1.add(nombre);
+                  mm1.add(e);
+                    mm1.add(p);
+                  raiz1.add(mm1);
+                  
+                  
+            }
+            m2.reload();
+            lea1.close();
+            File com = new File("./compradores.txt");
+            File cr = new File("./carros.txt");
+            File vn = new File("./ventas.txt");
+            
+           
+            
+            
+            
+        } catch (Exception e) {
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton10MouseClicked
 
     public String quit(String id){
         String arreglo = "";
@@ -1352,6 +1461,7 @@ public class main extends javax.swing.JFrame {
     ArrayList<Vendedor> vendedores = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1386,7 +1496,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTree jTree2;
     private javax.swing.JButton jb_act;
     private javax.swing.JButton jb_agreVeh;
     private javax.swing.JButton jb_agregarcliente;
@@ -1395,6 +1504,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jc_carros;
     private javax.swing.JComboBox<String> jc_cliente;
     private javax.swing.JComboBox<String> jc_vendedor;
+    private javax.swing.JTree jt_admin;
     private javax.swing.JTextField jt_anio;
     private javax.swing.JTree jt_archivodia;
     private javax.swing.JTextField jt_color;
